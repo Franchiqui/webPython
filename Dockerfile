@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Establece el directorio de trabajo en /app
-WORKDIR /server
+WORKDIR /app
 
 RUN python -m venv venv
 
