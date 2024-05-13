@@ -1,4 +1,4 @@
-import socket 
+import socket
 
 host , port = '127.0.0.1' , 8888
 
