@@ -11,9 +11,6 @@ RUN /bin/bash -c "source venv/bin/activate"
 
 RUN pip install deepl
 
-# Instala los módulos especificados en requirements.txt
-RUN pip install -r requirements.txt
-
 # Copia el archivo Python al contenedor
 COPY server.py /app/server.py
 
