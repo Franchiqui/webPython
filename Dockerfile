@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Establece el directorio de trabajo en /app
-WORKDIR /app
+WORKDIR /server
 
 RUN python -m venv venv
 
@@ -15,7 +15,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
 # Copia el archivo Python al contenedor
-COPY server.py /app/server.py
+COPY app.py /server/app.py
 
 # Expone el puerto 8888 para que el servidor sea accesible desde fuera del contenedor
 EXPOSE 8888
