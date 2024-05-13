@@ -4,6 +4,10 @@ FROM python:3.11-slim
 # Establece el directorio de trabajo en /app
 WORKDIR /app
 
+RUN python -m venv venv
+
+RUN /bin/bash -c "source venv/bin/activate"
+
 # Copia el archivo requirements.txt al contenedor
 COPY requirements.txt /app/requirements.txt
 
