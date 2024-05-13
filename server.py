@@ -1,5 +1,5 @@
 import socket
-from app  import traductor_func
+import traductor
 
 host, port = '127.0.0.1', 8888
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -27,7 +27,7 @@ def process_request(request):
             translate_text, target_lang = request_data.split('&')
             translate_text = translate_text.split('=')[1]
             target_lang = target_lang.split('=')[1]
-            traduccion = traductor_func(translate_text, target_lang)
+            traduccion = traductor(translate_text, target_lang)
             response = f'HTTP/1.1 200 OK\nContent-Type: text/plain\n\n{traduccion}'.encode('utf-8')
         else:
             response = 'HTTP/1.1 404 Not Found\nContent-Type: text/plain\n\nError 404: Recurso no encontrado'.encode('utf-8')

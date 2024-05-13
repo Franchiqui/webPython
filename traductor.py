@@ -1,6 +1,6 @@
 import deepl
 
-def traductor_func(request_data):
+def traductor(request_data):
     # Extraer los datos de la solicitud
     translate_text, target_lang = request_data.split('&')
     translate_text = translate_text.split('=')[1]
