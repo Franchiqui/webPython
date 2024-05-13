@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Establece el directorio de trabajo en /app
-WORKDIR /app
+WORKDIR /server
 
 RUN python -m venv venv
 
@@ -18,4 +18,4 @@ COPY server.py /app/server.py
 EXPOSE 8888
 
 # Ejecuta el script Python cuando se inicie el contenedor
-CMD ["python", "/app/server.py"]
+CMD ["python", "server.py"]
