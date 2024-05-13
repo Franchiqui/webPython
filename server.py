@@ -37,6 +37,8 @@ while True:
             mimetype = 'text/css'
         elif(myfile.endswith('.pdf')):
             mimetype = 'application/pdf'
+        elif(myfile.endswith('.app')):
+            mimetype = 'application/py'
         else:
             mimetype = 'text/html'
 
