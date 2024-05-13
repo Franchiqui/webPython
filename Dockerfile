@@ -15,7 +15,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
 # Copia el archivo Python al contenedor
-COPY app.py /server/app.py
+COPY server.py /app/server.py
 
 # Expone el puerto 8888 para que el servidor sea accesible desde fuera del contenedor
 EXPOSE 8888
