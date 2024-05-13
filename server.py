@@ -1,5 +1,5 @@
 import socket
-from app.traductor import traductor_func
+from app  import traductor_func
 
 host, port = '127.0.0.1', 8888
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
