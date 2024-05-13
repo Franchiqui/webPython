@@ -1,5 +1,5 @@
 # Usa la imagen oficial de Python
-FROM python:3.11-slim
+FROM python:3.9-slim
 
 # Establece el directorio de trabajo en /app
 WORKDIR /app
@@ -7,6 +7,7 @@ WORKDIR /app
 RUN python -m venv venv
 
 RUN /bin/bash -c "source venv/bin/activate"
+
 
 # Copia el archivo requirements.txt al contenedor
 COPY requirements.txt /app/requirements.txt
@@ -21,4 +22,4 @@ COPY server.py /app/server.py
 EXPOSE 8888
 
 # Ejecuta el script Python cuando se inicie el contenedor
-CMD ["python", "server.py"]
+CMD ["python", "/app/server.py"]
