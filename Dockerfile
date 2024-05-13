@@ -7,9 +7,6 @@ WORKDIR /app
 # Copia el archivo Python al contenedor
 COPY server.py /app/server.py
 
-RUN python -m venv venv
-
-RUN /bin/bash -c "source venv/bin/activate"
 
 # Instala las dependencias del servidor (en este caso, solo el módulo 'socket')
 
