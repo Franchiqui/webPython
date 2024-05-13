@@ -12,7 +12,6 @@ RUN python -m venv venv
 RUN /bin/bash -c "source venv/bin/activate"
 
 # Instala las dependencias del servidor (en este caso, solo el módulo 'socket')
-RUN pip install socket
 
 RUN pip install deepl
 
